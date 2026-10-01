@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Website</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            /* Background Image */
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.65)
+                ),
+                url("https://images.unsplash.com/photo-1519608487953-e999c86e7455");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            text-align: center;
+        }
+
+        /* Main Box */
+
+        .container {
+            padding: 50px;
+            border-radius: 25px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            backdrop-filter: blur(10px);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            animation: boxAnimation 1.5s ease;
+        }
+
+        @keyframes boxAnimation {
+
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* Heading Animation */
+
+        h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+
+            animation: headingAnimation 2s infinite alternate;
+        }
+
+        @keyframes headingAnimation {
+
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-10px);
+            }
+
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 35px;
+            color: #ddd;
+        }
+
+        /* Button */
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 16px 40px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 50px;
+
+            background: linear-gradient(
+                90deg,
+                #2563eb,
+                #7c3aed,
+                #ec4899
+            );
+
+            background-size: 200%;
+
+            box-shadow:
+                0 0 10px #2563eb,
+                0 0 25px #7c3aed;
+
+            transition: 0.4s;
+
+            animation: buttonGlow 2s infinite alternate;
+        }
+
+        /* Button Glow */
+
+        @keyframes buttonGlow {
+
+            from {
+                box-shadow:
+                    0 0 10px #2563eb;
+            }
+
+            to {
+                box-shadow:
+                    0 0 30px #ec4899,
+                    0 0 50px #7c3aed;
+            }
+
+        }
+
+        /* Hover Animation */
+
+        .btn:hover {
+
+            transform: scale(1.15) translateY(-5px);
+
+            background-position: right;
+
+            box-shadow:
+                0 0 20px #38bdf8,
+                0 0 50px #8b5cf6;
+        }
+
+        /* Click Animation */
+
+        .btn:active {
+
+            transform: scale(0.95);
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            Hi, I'm Harpreet 👋
+        </h1>
+
+        <p>
+            Welcome to my website 🚀
+        </p>
+
+        <!-- Button -->
+        <a href="about.html" class="btn">
+            Click Me 🚀
+        </a>
+
+    </div>
+
+</body>
+
+</html>
